@@ -67,10 +67,10 @@
 
    `(isearch ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
    `(lazy-highlight ((t (:background ,background :foreground ,text-2 :box (:line-width 1 :color ,dark-blue)))))
-   `(mode-line ((t (:foreground ,text :background ,background-3 :underline (:color ,dark-blue :style line)))))
+   `(mode-line ((t (:foreground ,text :background ,background-3 ))))
    `(mode-line-buffer-id ((t (:weight bold :foreground ,yellow))))
-   `(mode-line-emphasis ((t (:weight bold))))
    `(mode-line-highlight ((t (:box (:line-width 3 :color ,dark-blue)))))
+   `(mode-line-emphasis ((t (:weight bold))))
    `(mode-line-inactive ((t (:weight light :foreground ,text :background ,background-2))))
    `(secondary-selection ((t (:background ,background-2))))
    `(trailing-whitespace ((t (:background ,background-3))))
@@ -136,7 +136,7 @@
    `(helm-grep-finish ((t (:foreground ,text :background ,background))))
    `(helm-grep-lineno ((t (:foreground ,text-4 :background ,background :inherit bold))))
    `(helm-grep-match ((t (:foreground nil :background nil :inherit helm-match))))
-   `(helm-header ((t (:foreground ,text :background ,background-3 :underline (:color ,dark-blue :style line)))))
+   `(helm-header ((t (:foreground ,text :background ,background-3))))
    `(helm-header-line-left-margin ((t (:foreground ,green :background ,nil))))
    `(helm-match ((t (:background ,text-highlight :foreground ,text-2))))
    `(helm-match-item ((t (:background ,text-highlight :foreground ,intense-green))))
@@ -144,7 +144,7 @@
    `(helm-selection ((t (:background ,text-region))))
    `(helm-selection-line ((t (:background ,background-2))))
    `(helm-separator ((t (:foreground ,text-2 :background ,background))))
-   `(helm-source-header ((t (:foreground ,text :background ,background-3 :underline (:color ,dark-blue :style line)))))
+   `(helm-source-header ((t (:foreground ,text :background ,background-3))))
    `(helm-time-zone-current ((t (:foreground ,green :background ,background))))
    `(helm-time-zone-home ((t (:foreground ,text-2 :background ,background))))
    `(helm-visible-mark ((t (:foreground ,green :background ,background-3))))
@@ -177,9 +177,9 @@
 
 ;;;###autoload
 (and load-file-name
-  (boundp 'custom-theme-load-path)
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
+	 (boundp 'custom-theme-load-path)
+	 (add-to-list 'custom-theme-load-path
+				  (file-name-as-directory (file-name-directory load-file-name))))
 
 
 (provide-theme 'seti)
